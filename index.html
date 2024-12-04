@@ -17,7 +17,8 @@
 
 <script>
   // Ecrire reponses en dur ici
-  const bonneReponse = "toto";
+  const bonneReponse = ["toto",
+    "if (bcrypt.compareSync(codeUtilisateur, codeCoffre)) {"];
 
   document.getElementById('answerForm').addEventListener('submit', function(event) {
     event.preventDefault(); // Prevent form from refreshing the page.
