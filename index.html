@@ -20,64 +20,101 @@
   <div id="retour"></div>
   <p id="chrono"></p>
   <input type="submit" id="starting" value="Start">
-
+</body>
   <script>
     // Ecrire reponses en dur ici
-    const bonneReponse = "toto";
-  
+    const bonneReponse = "test";
+    const bonneReponse1 = "1492";
+    const bonneReponse2 = "635 000 000";
+    const bonneReponse3 = "5468";
+    const bonneReponse4 = "if(brypt.comparesync)(codeutilisateur))";
+    const bonneReponse5 = "waiting";
+    const bonneReponse6 = "2 birds, 1 stone";
+    const bonneReponse7 = "test2";
+
     document.getElementById('answerForm').addEventListener('submit', function(event) {
       event.preventDefault(); // Prevent form from refreshing the page.
   
       const reponseUtilisateur = document.getElementById('reponse').value.toLowerCase();
       const retour = document.getElementById('retour');
-  
+
       if (reponseUtilisateur === bonneReponse) {
         retour.textContent = "Great answer, you can go to the next enigma!";
         retour.style.color = "white";
-      } else {
+      } 
+      else if (reponseUtilisateur === bonneReponse1) {
+        retour.textContent = "Génial tu as la reponse 1";
+        retour.style.color = "White";
+      }
+      else if (reponseUtilisateur === bonneReponse2) {
+        retour.textContent = "Génial tu as la reponse 2";
+        retour.style.color = "White";
+      }
+      else if (reponseUtilisateur === bonneReponse3) {
+        retour.textContent = "Génial tu as la reponse 3";
+        retour.style.color = "White";
+      }
+      else if (reponseUtilisateur === bonneReponse4) {
+        retour.textContent = "Génial tu as la reponse 4";
+        retour.style.color = "White";
+      }
+      else if (reponseUtilisateur === bonneReponse5) {
+        retour.textContent = "Génial tu as la reponse 5";
+        retour.style.color = "White";
+      }
+      else if (reponseUtilisateur === bonneReponse6) {
+        retour.textContent = "Génial tu as la reponse 6";
+        retour.style.color = "White";
+      }
+      else if (reponseUtilisateur === bonneReponse7) {
+        retour.textContent = "Génial tu as la reponse 7";
+        retour.style.color = "White";
+      }
+      else {
         retour.textContent = "You entered the wrong answer, try again.";
         retour.style.color = "red";
       }
-      });
-  
-  
+      }
+      );
+
+
     // Variable pour stocker l'intervalle
     let interval;
-  
+
     // Fonction pour démarrer le chronomètre
     function startTimer() {
       // Initialiser la date de fin
       let countDownDate = new Date().getTime() + 1000 * 60 * 60; // 1 heure à partir de maintenant
-  
+
       // Effacer tout intervalle précédent pour éviter les doublons
       clearInterval(interval);
-  
+
       // Définir un nouvel intervalle
       interval = setInterval(function() {
         let now = new Date().getTime();
         let acttime = countDownDate - now;
-  
+
         let minutes = Math.floor((acttime % (1000 * 60 * 60)) / (1000 * 60));
         let seconds = Math.floor((acttime % (1000 * 60)) / 1000);
-  
+
         document.getElementById("chrono").innerHTML = minutes + "m " + seconds + "s ";
-  
+
         if (acttime < 0) {
           NONE
           //IMPLEMENTER UN IF POUR QUAND LE JOUEUR PERD
         }
       }, 1000);
     }
-  
+
     // Ajouter un gestionnaire d'événement au bouton "Start"
     document.getElementById("starting").addEventListener("click", startTimer);
-  
+
     const startButton = document.getElementById('starting');
     startButton.addEventListener('click', () => {
     // Cacher le bouton en modifiant son style
       startButton.style.display = 'none';});
   </script>
-</body>  
+</body>
 
 
 
