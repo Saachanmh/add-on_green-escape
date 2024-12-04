@@ -20,64 +20,66 @@
   <div id="retour"></div>
   <p id="chrono"></p>
   <input type="submit" id="starting" value="Start">
+
+  <script>
+    // Ecrire reponses en dur ici
+    const bonneReponse = "toto";
+  
+    document.getElementById('answerForm').addEventListener('submit', function(event) {
+      event.preventDefault(); // Prevent form from refreshing the page.
+  
+      const reponseUtilisateur = document.getElementById('reponse').value.trim();
+      const retour = document.getElementById('retour');
+  
+      if (reponseUtilisateur === bonneReponse) {
+        retour.textContent = "Great answer, you can go to the next enigma!";
+        retour.style.color = "white";
+      } else {
+        retour.textContent = "You entered the wrong answer, try again.";
+        retour.style.color = "red";
+      }
+      });
+  
+  
+    // Variable pour stocker l'intervalle
+    let interval;
+  
+    // Fonction pour démarrer le chronomètre
+    function startTimer() {
+      // Initialiser la date de fin
+      let countDownDate = new Date().getTime() + 1000 * 60 * 60; // 1 heure à partir de maintenant
+  
+      // Effacer tout intervalle précédent pour éviter les doublons
+      clearInterval(interval);
+  
+      // Définir un nouvel intervalle
+      interval = setInterval(function() {
+        let now = new Date().getTime();
+        let acttime = 0;//countDownDate - now;
+  
+        let minutes = Math.floor((acttime % (1000 * 60 * 60)) / (1000 * 60));
+        let seconds = Math.floor((acttime % (1000 * 60)) / 1000);
+  
+        document.getElementById("chrono").innerHTML = minutes + "m " + seconds + "s ";
+  
+        if (acttime < 0) {
+          NONE
+          //IMPLEMENTER UN IF POUR QUAND LE JOUEUR PERD
+        }
+      }, 1000);
+    }
+  
+    // Ajouter un gestionnaire d'événement au bouton "Start"
+    document.getElementById("starting").addEventListener("click", startTimer);
+  
+    const startButton = document.getElementById('starting');
+    startButton.addEventListener('click', () => {
+    // Cacher le bouton en modifiant son style
+      startButton.style.display = 'none';});
+  </script>
 </body>  
 
-<script>
-  // Ecrire reponses en dur ici
-  const bonneReponse = "toto";
 
-  document.getElementById('answerForm').addEventListener('submit', function(event) {
-    event.preventDefault(); // Prevent form from refreshing the page.
-
-    const reponseUtilisateur = document.getElementById('reponse').value.trim();
-    const retour = document.getElementById('retour');
-
-    if (reponseUtilisateur === bonneReponse) {
-      retour.textContent = "Great answer, you can go to the next enigma!";
-      retour.style.color = "white";
-    } else {
-      retour.textContent = "You entered the wrong answer, try again.";
-      retour.style.color = "red";
-    }
-    });
-
-
-  // Variable pour stocker l'intervalle
-  let interval;
-
-  // Fonction pour démarrer le chronomètre
-  function startTimer() {
-    // Initialiser la date de fin
-    let countDownDate = new Date().getTime() + 1000 * 60 * 60; // 1 heure à partir de maintenant
-
-    // Effacer tout intervalle précédent pour éviter les doublons
-    clearInterval(interval);
-
-    // Définir un nouvel intervalle
-    interval = setInterval(function() {
-      let now = new Date().getTime();
-      let acttime = 0;//countDownDate - now;
-
-      let minutes = Math.floor((acttime % (1000 * 60 * 60)) / (1000 * 60));
-      let seconds = Math.floor((acttime % (1000 * 60)) / 1000);
-
-      document.getElementById("chrono").innerHTML = minutes + "m " + seconds + "s ";
-
-      if (acttime < 0) {
-        NONE
-        //IMPLEMENTER UN IF POUR QUAND LE JOUEUR PERD
-      }
-    }, 1000);
-  }
-
-  // Ajouter un gestionnaire d'événement au bouton "Start"
-  document.getElementById("starting").addEventListener("click", startTimer);
-
-  const startButton = document.getElementById('starting');
-  startButton.addEventListener('click', () => {
-  // Cacher le bouton en modifiant son style
-    startButton.style.display = 'none';});
-</script>
 
 </html>
 
