@@ -21,35 +21,16 @@
   <p id="chrono"></p>
   <input type="submit" id="starting" value="Start">
 
-<script>
-  // Ecrire reponses en dur ici
-  const bonneReponse = ["toto",
-    "if (bcrypt.compareSync(codeUtilisateur, codeCoffre)) {"];
-
-  document.getElementById('answerForm').addEventListener('submit', function(event) {
-    event.preventDefault(); // Prevent form from refreshing the page.
-
-    const reponseUtilisateur = document.getElementById('reponse').value.trim();
-    const retour = document.getElementById('retour');
-
-    if (reponseUtilisateur === bonneReponse) {
-      retour.textContent = "Great answer, you can go to the next enigma!";
-      retour.style.color = "green";
-    } else {
-      retour.textContent = "You entered the wrong answer, try again.";
-      retour.style.color = "red";
-    }
-  });
-</script>
 </body>
   <script>
     // Ecrire reponses en dur ici
-    const bonneReponse = "toto";
+    const bonneReponse = ["1492", "5468",
+            "if (bcrypt.compareSync(codeUtilisateur, codeCoffre)) {", "two birds, one stone"];
 
     document.getElementById('answerForm').addEventListener('submit', function(event) {
       event.preventDefault(); // Prevent form from refreshing the page.
 
-      const reponseUtilisateur = document.getElementById('reponse').value.trim();
+      const reponseUtilisateur = document.getElementById('reponse').value.toLowerCase()g;
       const retour = document.getElementById('retour');
 
       if (reponseUtilisateur === bonneReponse) {
