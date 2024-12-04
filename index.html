@@ -14,7 +14,7 @@
     <button type="submit">Check</button>
   </form>
   <div id="retour"></div>
-  <p id="demo"></p>
+  <p id="chrono"></p>
   <input type="submit" id="starting" value="start">
   
 
@@ -57,7 +57,7 @@
       let minutes = Math.floor((acttime % (1000 * 60 * 60)) / (1000 * 60));
       let seconds = Math.floor((acttime % (1000 * 60)) / 1000);
 
-      document.getElementById("demo").innerHTML = minutes + "m " + seconds + "s ";
+      document.getElementById("chrono").innerHTML = minutes + "m " + seconds + "s ";
 
       if (acttime < 0) {
         //Ajouter la condition de defaite ...
