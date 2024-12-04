@@ -20,12 +20,9 @@
   <div id="retour"></div>
   <p id="chrono"></p>
   <input type="submit" id="starting" value="Start">
-
-</body>
   <script>
     // Ecrire reponses en dur ici
-    const bonneReponse = ["1492", "5468",
-            "if (bcrypt.compareSync(codeUtilisateur, codeCoffre)) {", "two birds, one stone"];
+    const bonneReponse = "toto";
 
     document.getElementById('answerForm').addEventListener('submit', function(event) {
       event.preventDefault(); // Prevent form from refreshing the page.
@@ -40,7 +37,7 @@
         retour.textContent = "You entered the wrong answer, try again.";
         retour.style.color = "red";
       }
-      });
+    });
 
 
     // Variable pour stocker l'intervalle
@@ -76,7 +73,7 @@
 
     const startButton = document.getElementById('starting');
     startButton.addEventListener('click', () => {
-    // Cacher le bouton en modifiant son style
+      // Cacher le bouton en modifiant son style
       startButton.style.display = 'none';});
   </script>
 </body>
