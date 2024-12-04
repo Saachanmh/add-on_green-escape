@@ -7,6 +7,32 @@
   <link href="styles.css" rel="stylesheet" />
 </head>
 <body>
-  
+<h1>Answer the Enigma</h1>
+<form id="answerForm">
+  <label for="reponse">Enter your Answer</label>
+  <input type="text" id="reponse" name="reponse" required>
+  <button type="submit">Check</button>
+</form>
+<div id="retour"></div>
+
+<script>
+  // Ecrire reponses en dur ici
+  const bonneReponse = "toto";
+
+  document.getElementById('answerForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent form from refreshing the page.
+
+    const reponseUtilisateur = document.getElementById('reponse').value.trim();
+    const retour = document.getElementById('retour');
+
+    if (reponseUtilisateur === bonneReponse) {
+      retour.textContent = "Great answer, you can go to the next enigma!";
+      retour.style.color = "green";
+    } else {
+      retour.textContent = "You entered the wrong answer, try again.";
+      retour.style.color = "red";
+    }
+  });
+</script>
 </body>
 </html>
