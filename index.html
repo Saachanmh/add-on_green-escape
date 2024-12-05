@@ -15,6 +15,7 @@
   <h1>Answer the Enigma</h1>
   <form id="answerForm">
     <input type="text" id="reponse" name="reponse" placeholder="Enter your Answer" required>
+    <button type="submit">Check</button>
   </form>
   <div id="retour"></div>
   <p id="chrono"></p>
@@ -31,6 +32,7 @@
     const bonneReponse6 = "twobirdsonestone";
     const bonneReponse7 = "caca";
     const bonneReponse8 = "j";
+    const bonneReponse9 = "yabi";
 
     document.getElementById('answerForm').addEventListener('submit', function(event) {
       event.preventDefault(); // Prevent form from refreshing the page.
@@ -73,6 +75,10 @@
       }
       else if (reponseUtilisateur === bonneReponse8) {
         retour.textContent = "The G418 team published a groundbreaking article revealing the hidden truths behind IT production. Their work, enriched with firsthand accounts and global insights, sparked widespread awareness about Green IT. The article inspired individuals and businesses to rethink their choices, marking a turning point in the fight for sustainable technology and environmental justice. You win the escape game GG";
+        retour.style.color = "White";
+      }
+      else if (reponseUtilisateur === bonneReponse9) {
+        retour.textContent = "Pray Yabi every day. Yabi is our Lord";
         retour.style.color = "White";
       }
       else {
