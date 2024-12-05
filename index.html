@@ -27,10 +27,11 @@
     const bonneReponse1 = "1492";
     const bonneReponse2 = "635 000 000";
     const bonneReponse3 = "5468";
-    const bonneReponse4 = "if5brypt.comparesynccodeutilisateurm,";
-    const bonneReponse5 = "waiting";
-    const bonneReponse6 = "2 birds, 1 stone";
-    const bonneReponse7 = "test2";
+    const bonneReponse4 = "if(bcrypt.comparesync(codeutilisateur,";
+    const bonneReponse5 = "cawyva ";
+    const bonneReponse6 = "twobirdsonestone";
+    const bonneReponse7 = "caca";
+    const bonneReponse8 = "j";
 
     document.getElementById('answerForm').addEventListener('submit', function(event) {
       event.preventDefault(); // Prevent form from refreshing the page.
@@ -39,35 +40,40 @@
       const retour = document.getElementById('retour');
 
       if (reponseUtilisateur === bonneReponse) {
-        retour.textContent = "G418 is an association based in New York City. This association plays the role of whistleblower by leaking investigations and shocking videos to sensibilize people about ecological problems around the world. You start the game as Alice a member of the G418. You just want to report about ecological impact due to electrical objects production in the world. A rumor blows about the fact that international companies hide the conditions of computer’s life from its creation to its end. The G418 team are looking to resolve these problems to put into the light these infamous rumours on an international level to sensibilize and help people about these problems which, in long term, could be dangerous for the earth and living things. On a late Monday, Alice, thinking about these events and who saw her team struggles with how to make prevention to people, decided to stay longer at work. She was looking at social media when she received an email. An anonymous person sent a message with a link attached to it. Worried, she opened the link and found a video of men, women and children, working in terrible conditions in a mine in The Democratic Republic of Congo. Still in shock of these images, Alice immediately decided to get up, took a screen, pin and red thread to make a map of all the steps of production and ecological, social and environmental issues. She quickly succeeded in creating a map of all these steps around the world. She decided to go to these places and to show to people how it works and the importance of making good choices in terms of IT. On Thursay morning, first thing, the G418 team gathered together and spoke about everything Alice did yesterday. They finally decided to go to the Democratic Republic of Congo to gather information directly from the source.";
+        retour.textContent = "G418 is an association based in New York City. This association plays the role of whistleblower by leaking investigations and shocking videos to sensibilize people about ecological problems around the world. You start the game as Alice a member of the G418. You just want to report about ecological impact due to electrical objects production in the world. A rumor blows about the fact that international companies hide the conditions of computer’s life from its creation to its end. The G418 team are looking to resolve these problems to put into the light these infamous rumours on an international level to sensibilize and help people about these problems which, in long term, could be dangerous for the earth and living things. An anonymous person sent a message with a link attached to it. Worried, she opened the link and found a video of men, women and children, working in terrible conditions in a mine in The Democratic Republic of Congo. On Thursay morning, the G418 team gathered together and spoke about everything Alice see yesterday. They finally decided to go to the Democratic Republic of Congo to gather information directly from the source.";
+        retour.textContent += "You can take all the card with number 1 and find a code to move on"
         retour.style.color = "white";
       } 
       else if (reponseUtilisateur === bonneReponse1) {
-        retour.textContent = "Génial tu as la reponse 1";
+        retour.textContent = "Nice we have all the information we need here. You can move to the card with number 2";
         retour.style.color = "White";
       }
       else if (reponseUtilisateur === bonneReponse2) {
-        retour.textContent = "Génial tu as la reponse 2";
+        retour.textContent = "Nice we have all the information we need here. We need to get out of this factory. You can move to the card with number 3 and take the biggest map of the box";
         retour.style.color = "White";
       }
       else if (reponseUtilisateur === bonneReponse3) {
-        retour.textContent = "Génial tu as la reponse 3";
+        retour.textContent = "Finally we are gone. You can take the card with number 4";
         retour.style.color = "White";
       }
       else if (reponseUtilisateur === bonneReponse4) {
-        retour.textContent = "Génial tu as la reponse 4";
+        retour.textContent = "Nice we have all the information we need here. You can move to the card with number 5. You can also take the card with the same color as the cards";
         retour.style.color = "White";
       }
       else if (reponseUtilisateur === bonneReponse5) {
-        retour.textContent = "Génial tu as la reponse 5";
+        retour.textContent = "Nice we have all the information we need here. You can take the card with number 6 and the envelope number 6 ";
         retour.style.color = "White";
       }
       else if (reponseUtilisateur === bonneReponse6) {
-        retour.textContent = "Génial tu as la reponse 6";
+        retour.textContent = "Optimization are good. Take the last map of the box to retrace your journey";
         retour.style.color = "White";
       }
       else if (reponseUtilisateur === bonneReponse7) {
-        retour.textContent = "Génial tu as la reponse 7";
+        retour.textContent = "Matilin est une merde";
+        retour.style.color = "White";
+      }
+      else if (reponseUtilisateur === bonneReponse8) {
+        retour.textContent = "The G418 team published a groundbreaking article revealing the hidden truths behind IT production. Their work, enriched with firsthand accounts and global insights, sparked widespread awareness about Green IT. The article inspired individuals and businesses to rethink their choices, marking a turning point in the fight for sustainable technology and environmental justice. You win the escape game GG";
         retour.style.color = "White";
       }
       else {
@@ -84,7 +90,7 @@
     // Fonction pour démarrer le chronomètre
     function startTimer() {
       // Initialiser la date de fin
-      let countDownDate = new Date().getTime() + 1000 * 60 * 60; // 1 heure à partir de maintenant
+      let countDownDate = new Date().getTime() + 1000 * 60 * 45; // 1 heure à partir de maintenant
 
       // Effacer tout intervalle précédent pour éviter les doublons
       clearInterval(interval);
@@ -100,8 +106,7 @@
         document.getElementById("chrono").innerHTML = minutes + "m " + seconds + "s ";
 
         if (acttime < 0) {
-          NONE
-          //IMPLEMENTER UN IF POUR QUAND LE JOUEUR PERD
+          document.innerHTML = "You lose RATIO"
         }
       }, 1000);
     }
