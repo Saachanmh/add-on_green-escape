@@ -36,7 +36,7 @@
 
     document.getElementById('answerForm').addEventListener('submit', function(event) {
       event.preventDefault(); // Prevent form from refreshing the page.
-  
+
       const reponseUtilisateur = document.getElementById('reponse').value.toLowerCase();
       const retour = document.getElementById('retour');
 
@@ -44,7 +44,7 @@
         retour.textContent = "G418 is an association based in New York City. This association plays the role of whistleblower by leaking investigations and shocking videos to sensibilize people about ecological problems around the world. You start the game as Alice a member of the G418. You just want to report about ecological impact due to electrical objects production in the world. A rumor blows about the fact that international companies hide the conditions of computer’s life from its creation to its end. The G418 team are looking to resolve these problems to put into the light these infamous rumours on an international level to sensibilize and help people about these problems which, in long term, could be dangerous for the earth and living things. An anonymous person sent a message with a link attached to it. Worried, she opened the link and found a video of men, women and children, working in terrible conditions in a mine in The Democratic Republic of Congo. On Thursay morning, the G418 team gathered together and spoke about everything Alice see yesterday. They finally decided to go to the Democratic Republic of Congo to gather information directly from the source.";
         retour.textContent += "You can take all the card with number 1 and find a code to move on"
         retour.style.color = "white";
-      } 
+      }
       else if (reponseUtilisateur === bonneReponse1) {
         retour.textContent = "Nice we have all the information we need here. You can move to the card with number 2";
         retour.style.color = "White";
@@ -81,7 +81,7 @@
         retour.textContent = "Pray Yabi every day. Yabi is our Lord";
         retour.style.color = "White";
       }
-      else {
+      else if (reponseUtilisateur) {
         retour.textContent = "You entered the wrong answer, try again.";
         retour.style.color = "red";
       }
